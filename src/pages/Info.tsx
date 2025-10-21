@@ -28,8 +28,8 @@ export default function Info() {
               de las tres causas de muerte cardiovasculares más importantes en el mundo.
             </p>
             <p>
-              Cuando un trombo se forma en el cerebro, se da un Accidente Cerebrovascular (ACV). <br>
-              Si el trombo se forma en el corazó, da lugar a un Infarto Agudo de Miocardio (IAM). <br>
+              Cuando un trombo se forma en el cerebro, se da un Accidente Cerebrovascular (ACV).
+              Si el trombo se forma en el corazó, da lugar a un Infarto Agudo de Miocardio (IAM).
               Y si el trombo se forma en una vena o se desplaza al pulmón, genera un Tromboembolismo venoso (TEV). 
             </p>
           </CardContent>
