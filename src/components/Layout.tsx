@@ -56,7 +56,7 @@ export default function Layout({ children }: LayoutProps) {
               <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
                 <Heart className="w-6 h-6 text-primary-foreground" />
               </div>
-              <span className="text-xl font-bold text-foreground">TromboPrevent</span>
+              <span className="text-xl font-bold text-foreground">Thrombotrack</span>
             </Link>
             <Button variant="ghost" size="sm" onClick={handleLogout}>
               <LogOut className="w-4 h-4 mr-2" />

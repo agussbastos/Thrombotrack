@@ -97,7 +97,7 @@ export default function Auth() {
           <div className="mx-auto w-16 h-16 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
             <Heart className="w-8 h-8 text-white" />
           </div>
-          <CardTitle className="text-3xl font-bold">TromboPrevent</CardTitle>
+          <CardTitle className="text-3xl font-bold">Thrombotrack</CardTitle>
           <CardDescription>
             Tu aliado en la prevención de trombosis
           </CardDescription>
