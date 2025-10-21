@@ -34,7 +34,7 @@ export default function Info() {
                 </li>
               <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">•</span>
-                  <span>Si el trombo se forma en el corazó, da lugar a un Infarto Agudo de Miocardio (IAM).</span>
+                  <span>Si el trombo se forma en el corazón, da lugar a un Infarto Agudo de Miocardio (IAM).</span>
                 </li>
               <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">•</span>
