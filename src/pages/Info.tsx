@@ -23,14 +23,12 @@ export default function Info() {
           </CardHeader>
           <CardContent className="text-muted-foreground space-y-3">
             <p>
-              La trombosis es la formación de un coágulo sanguíneo (trombo) en las arterias o venas, 
-              el cual la llegada de sangre y oxígeno a los tejidos. Es el principal factor responsable 
-              de las tres causas de muerte cardiovasculares más importantes en el mundo.
+              La trombosis es la formación de un coágulo sanguíneo (trombo) dentro de un vaso sanguíneo, 
+              que obstruye el flujo de sangre a través del sistema circulatorio.
             </p>
             <p>
-              Cuando un trombo se forma en el cerebro, se da un Accidente Cerebrovascular (ACV). <br>
-              Si el trombo se forma en el corazó, da lugar a un Infarto Agudo de Miocardio (IAM). <br>
-              Y si el trombo se forma en una vena o se desplaza al pulmón, genera un Tromboembolismo venoso (TEV). 
+              Cuando un trombo se desprende y viaja por el torrente sanguíneo, se denomina embolia. 
+              Esto puede causar complicaciones graves si bloquea el flujo sanguíneo en órganos vitales.
             </p>
           </CardContent>
         </Card>
@@ -51,19 +49,11 @@ export default function Info() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">•</span>
-                  <span>Cirugías recientes (cadera, rodilla, cáncer)</span>
+                  <span>Cirugías recientes</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">•</span>
                   <span>Obesidad</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-accent mt-1">•</span>
-                  <span>La edad aumenta probabilidades de padecerla (aunque puede suceder a cualquier edad)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-accent mt-1">•</span>
-                  <span>Hipertensión, diabetes, colesterol aumentado, fumar</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">•</span>
@@ -75,11 +65,11 @@ export default function Info() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">•</span>
-                  <span>Cáncer o quimioterapia</span>
+                  <span>Tabaquismo</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">•</span>
-                  <span>Uso de anticonceptivos y terapia hormonal</span>
+                  <span>Ciertos medicamentos (anticonceptivos, terapia hormonal)</span>
                 </li>
               </ul>
             </CardContent>
@@ -139,47 +129,9 @@ export default function Info() {
               <AccordionItem value="item-1">
                 <AccordionTrigger>¿Cuáles son los síntomas de la trombosis venosa profunda (TVP)?</AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  Los síntomas más comunes incluyen: 
-                  <li className="flex items-start gap-2">
-                  <span className="text-accent mt-1">•</span>
-                  <span>Dolor de pantorrilla</span>
-                </li>
-                  <li className="flex items-start gap-2">
-                  <span className="text-accent mt-1">•</span>
-                  <span>Inflamación del pie o tobillo</span>
-                </li>
-                  <li className="flex items-start gap-2">
-                  <span className="text-accent mt-1">•</span>
-                  <span>Enrojecimiento evidente</span>
-                </li>
-                  <li className="flex items-start gap-2">
-                  <span className="text-accent mt-1">•</span>
-                  <span>Calor en el área afectada</span>
-                </li>
-                  <li className="flex items-start gap-2">
-                  <span className="text-accent mt-1">•</span>
-                  <span>Disnea</span>
-                </li>
-                  <li className="flex items-start gap-2">
-                  <span className="text-accent mt-1">•</span>
-                  <span>Respiración rápida sin causa aparente</span>
-                </li>
-                  <li className="flex items-start gap-2">
-                  <span className="text-accent mt-1">•</span>
-                  <span>Dolor en el pecho</span>
-                </li>
-                  <li className="flex items-start gap-2">
-                  <span className="text-accent mt-1">•</span>
-                  <span>Frecuencia cardíaca rápida y mareos o debilidad</span>
-                </li>
-                  <li className="flex items-start gap-2">
-                  <span className="text-accent mt-1">•</span>
-                  <span>Falta de aire inexplicable</span>
-                </li>
-                  <li className="flex items-start gap-2">
-                  <span className="text-accent mt-1">•</span>
-                  <span>Dolor o sensibilidad en la pierna al estar de pie</span>
-                </li>
+                  Los síntomas más comunes incluyen: hinchazón en una pierna (rara vez en ambas), 
+                  dolor o sensibilidad en la pierna (puede sentirse al estar de pie o caminar), 
+                  enrojecimiento o decoloración de la piel, y sensación de calor en la pierna afectada.
                 </AccordionContent>
               </AccordionItem>
 
@@ -202,21 +154,11 @@ export default function Info() {
               </AccordionItem>
 
               <AccordionItem value="item-4">
-                <AccordionTrigger>¿La Trombosis se relaciona con el cáncer?</AccordionTrigger>
+                <AccordionTrigger>¿Quién está en mayor riesgo?</AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  Sí. Mucha gente no lo sabe, pero en ocasiones, la trombosis se da como un primer síntoma de cáncer 
-                  debido a la formación de los tumores; hay estudios que revelan que muchas personas que anteriormente 
-                  tuvieron trombosis, luego fueron diagnosticadas de cáncer, especialmente de cerebro, páncreas, estómago 
-                  o pulmón. Es importante aclarar que la trombosis es la segunda causa de muerte en personas con cáncer.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-4">
-                <AccordionTrigger>¿Qué se celebra el 13 de Octubre?</AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  La magnitud del problema generado por la trombosis llevó a que se creara el DÍA MUNDIAL DE LA TROMBOSIS 
-                  que se celebra el 13 DE OCTUBRE con el objetivo de concientizar sobre la necesidad de actuar al respecto 
-                  y combatir esta enfermedad. Los colores que se utilizan en representación son el azul y rojo.
+                  Las personas con mayor riesgo incluyen: mayores de 60 años, personas con sobrepeso, 
+                  fumadores, aquellos con antecedentes familiares, personas que han tenido cirugía reciente, 
+                  embarazadas o en postparto, y quienes toman ciertos medicamentos como anticonceptivos orales.
                 </AccordionContent>
               </AccordionItem>
 
