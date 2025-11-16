@@ -96,17 +96,17 @@ export default function Dashboard() {
 
   return (
     <Layout>
-      <div className="space-y-6">
-        <div className="text-center space-y-2">
-          <h1 className="text-4xl font-bold text-foreground">
+      <div className="space-y-6 md:space-y-8">
+        <div className="text-center space-y-2 px-4">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
             Bienvenido a Thrombotrack
           </h1>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-sm md:text-base lg:text-lg text-muted-foreground">
             Tu plataforma integral para la prevención de trombosis
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
           {features.map((feature) => {
             const Icon = feature.icon;
             return (
@@ -116,11 +116,11 @@ export default function Dashboard() {
                 onClick={() => navigate(feature.href)}
               >
                 <CardHeader>
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${feature.color} flex items-center justify-center mb-2`}>
-                    <Icon className="w-6 h-6 text-white" />
+                  <div className={`w-10 h-10 md:w-12 md:h-12 rounded-lg bg-gradient-to-br ${feature.color} flex items-center justify-center mb-2`}>
+                    <Icon className="w-5 h-5 md:w-6 md:h-6 text-white" />
                   </div>
-                  <CardTitle className="text-xl">{feature.title}</CardTitle>
-                  <CardDescription>{feature.description}</CardDescription>
+                  <CardTitle className="text-base md:text-lg">{feature.title}</CardTitle>
+                  <CardDescription className="text-sm">{feature.description}</CardDescription>
                 </CardHeader>
               </Card>
             );
@@ -129,13 +129,13 @@ export default function Dashboard() {
 
         <Card className="bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Heart className="w-6 h-6 text-primary" />
+            <CardTitle className="flex items-center gap-2 text-base md:text-lg">
+              <Heart className="w-5 h-5 md:w-6 md:h-6 text-primary" />
               Consejo del Día
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-muted-foreground">
+            <p className="text-sm md:text-base text-muted-foreground">
               Mantente hidratado durante el día. Beber suficiente agua ayuda a mantener la sangre fluida y reduce el riesgo de coágulos.
             </p>
           </CardContent>

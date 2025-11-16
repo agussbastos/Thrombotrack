@@ -6,15 +6,18 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Heart } from "lucide-react";
 import { toast } from "sonner";
 import type { User, Session } from '@supabase/supabase-js';
+import logo from "@/assets/logo.png";
+import RiskAssessment from "@/components/RiskAssessment";
 
 export default function Auth() {
   const navigate = useNavigate();
   const [user, setUser] = useState<User | null>(null);
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(false);
+  const [showRiskAssessment, setShowRiskAssessment] = useState(false);
+  const [newUserId, setNewUserId] = useState<string | null>(null);
 
   useEffect(() => {
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
@@ -74,7 +77,7 @@ export default function Auth() {
 
     const redirectUrl = `${window.location.origin}/`;
 
-    const { error } = await supabase.auth.signUp({
+    const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: {
@@ -84,21 +87,36 @@ export default function Auth() {
 
     if (error) {
       toast.error(error.message);
+      setLoading(false);
     } else {
-      toast.success("¡Cuenta creada! Revisa tu email para confirmar.");
+      toast.success("¡Cuenta creada! Completa la evaluación de riesgo.");
+      setNewUserId(data.user?.id || null);
+      setShowRiskAssessment(true);
     }
     setLoading(false);
   };
+
+  if (showRiskAssessment) {
+    return (
+      <RiskAssessment 
+        userId={newUserId} 
+        onComplete={() => {
+          setShowRiskAssessment(false);
+          navigate("/dashboard");
+        }} 
+      />
+    );
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 via-background to-accent/10 p-4">
       <Card className="w-full max-w-md shadow-lg">
         <CardHeader className="text-center space-y-4">
-          <div className="mx-auto w-16 h-16 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-            <Heart className="w-8 h-8 text-white" />
+          <div className="mx-auto w-20 h-20 flex items-center justify-center">
+            <img src={logo} alt="Thrombotrack Logo" className="w-full h-full object-contain" />
           </div>
-          <CardTitle className="text-3xl font-bold">Thrombotrack</CardTitle>
-          <CardDescription>
+          <CardTitle className="text-2xl md:text-3xl font-bold">Thrombotrack</CardTitle>
+          <CardDescription className="text-sm md:text-base">
             Tu aliado en la prevención de trombosis
           </CardDescription>
         </CardHeader>
