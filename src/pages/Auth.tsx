@@ -87,7 +87,6 @@ export default function Auth() {
 
     if (error) {
       toast.error(error.message);
-      setLoading(false);
     } else {
       toast.success("¡Cuenta creada! Completa la evaluación de riesgo.");
       setNewUserId(data.user?.id || null);
