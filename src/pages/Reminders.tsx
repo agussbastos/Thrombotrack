@@ -28,6 +28,18 @@ const challenges = [
     description: "Desafío de 7 días",
     difficulty: "Difícil",
     points: 100
+  },
+  {
+    title: "Dormir Mejor",
+    description: "Aumenta progresivamente tus horas de sueño hasta alcanzar 7-8 horas",
+    difficulty: "Moderado",
+    points: 60
+  },
+  {
+    title: "Chequeo Médico",
+    description: "Agenda y asiste a tu control médico preventivo",
+    difficulty: "Fácil",
+    points: 80
   }
 ];
 
